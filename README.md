@@ -3,6 +3,7 @@
 ```bash
 dotnet restore src
 dotnet build -c Release --no-restore src
+dotnet pack src/ImGui.NET -c Release --no-restore --no-build
 ```
 
 # ImGui.NET
