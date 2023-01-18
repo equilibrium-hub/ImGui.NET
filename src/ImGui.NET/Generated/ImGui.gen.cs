@@ -14574,5 +14574,51 @@ namespace ImGuiNET
             }
             return ret != 0;
         }
+        public static bool ImGui_ImplSDL2_InitForD3D(IntPtr window)
+        {
+            void* native_window = (void*)window.ToPointer();
+            byte ret = ImGuiNative.ImGui_ImplSDL2_InitForD3D(native_window);
+            return ret != 0;
+        }
+        public static bool ImGui_ImplSDL2_InitForMetal(IntPtr window)
+        {
+            void* native_window = (void*)window.ToPointer();
+            byte ret = ImGuiNative.ImGui_ImplSDL2_InitForMetal(native_window);
+            return ret != 0;
+        }
+        public static bool ImGui_ImplSDL2_InitForOpenGL(IntPtr window, IntPtr sdl_gl_context)
+        {
+            void* native_window = (void*)window.ToPointer();
+            void* native_sdl_gl_context = (void*)sdl_gl_context.ToPointer();
+            byte ret = ImGuiNative.ImGui_ImplSDL2_InitForOpenGL(native_window, native_sdl_gl_context);
+            return ret != 0;
+        }
+        public static bool ImGui_ImplSDL2_InitForSDLRenderer(IntPtr window, IntPtr renderer)
+        {
+            void* native_window = (void*)window.ToPointer();
+            void* native_renderer = (void*)renderer.ToPointer();
+            byte ret = ImGuiNative.ImGui_ImplSDL2_InitForSDLRenderer(native_window, native_renderer);
+            return ret != 0;
+        }
+        public static bool ImGui_ImplSDL2_InitForVulkan(IntPtr window)
+        {
+            void* native_window = (void*)window.ToPointer();
+            byte ret = ImGuiNative.ImGui_ImplSDL2_InitForVulkan(native_window);
+            return ret != 0;
+        }
+        public static void ImGui_ImplSDL2_NewFrame()
+        {
+            ImGuiNative.ImGui_ImplSDL2_NewFrame();
+        }
+        public static bool ImGui_ImplSDL2_ProcessEvent(IntPtr evt)
+        {
+            void* native_evt = (void*)evt.ToPointer();
+            byte ret = ImGuiNative.ImGui_ImplSDL2_ProcessEvent(native_evt);
+            return ret != 0;
+        }
+        public static void ImGui_ImplSDL2_Shutdown()
+        {
+            ImGuiNative.ImGui_ImplSDL2_Shutdown();
+        }
     }
 }

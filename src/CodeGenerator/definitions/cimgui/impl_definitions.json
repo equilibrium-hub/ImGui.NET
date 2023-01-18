@@ -1,14 +1,14 @@
 {
   "ImGui_ImplSDL2_InitForD3D": [
     {
-      "args": "(SDL_Window* window)",
+      "args": "(void* window)",
       "argsT": [
         {
           "name": "window",
-          "type": "SDL_Window*"
+          "type": "void*"
         }
       ],
-      "argsoriginal": "(SDL_Window* window)",
+      "argsoriginal": "(void* window)",
       "call_args": "(window)",
       "cimguiname": "ImGui_ImplSDL2_InitForD3D",
       "defaults": {},
@@ -16,20 +16,20 @@
       "location": "imgui_impl_sdl:29",
       "ov_cimguiname": "ImGui_ImplSDL2_InitForD3D",
       "ret": "bool",
-      "signature": "(SDL_Window*)",
+      "signature": "(void*)",
       "stname": ""
     }
   ],
   "ImGui_ImplSDL2_InitForMetal": [
     {
-      "args": "(SDL_Window* window)",
+      "args": "(void* window)",
       "argsT": [
         {
           "name": "window",
-          "type": "SDL_Window*"
+          "type": "void*"
         }
       ],
-      "argsoriginal": "(SDL_Window* window)",
+      "argsoriginal": "(void* window)",
       "call_args": "(window)",
       "cimguiname": "ImGui_ImplSDL2_InitForMetal",
       "defaults": {},
@@ -37,24 +37,24 @@
       "location": "imgui_impl_sdl:30",
       "ov_cimguiname": "ImGui_ImplSDL2_InitForMetal",
       "ret": "bool",
-      "signature": "(SDL_Window*)",
+      "signature": "(void*)",
       "stname": ""
     }
   ],
   "ImGui_ImplSDL2_InitForOpenGL": [
     {
-      "args": "(SDL_Window* window,void* sdl_gl_context)",
+      "args": "(void* window,void* sdl_gl_context)",
       "argsT": [
         {
           "name": "window",
-          "type": "SDL_Window*"
+          "type": "void*"
         },
         {
           "name": "sdl_gl_context",
           "type": "void*"
         }
       ],
-      "argsoriginal": "(SDL_Window* window,void* sdl_gl_context)",
+      "argsoriginal": "(void* window,void* sdl_gl_context)",
       "call_args": "(window,sdl_gl_context)",
       "cimguiname": "ImGui_ImplSDL2_InitForOpenGL",
       "defaults": {},
@@ -62,24 +62,24 @@
       "location": "imgui_impl_sdl:27",
       "ov_cimguiname": "ImGui_ImplSDL2_InitForOpenGL",
       "ret": "bool",
-      "signature": "(SDL_Window*,void*)",
+      "signature": "(void*,void*)",
       "stname": ""
     }
   ],
   "ImGui_ImplSDL2_InitForSDLRenderer": [
     {
-      "args": "(SDL_Window* window,SDL_Renderer* renderer)",
+      "args": "(void* window,void* renderer)",
       "argsT": [
         {
           "name": "window",
-          "type": "SDL_Window*"
+          "type": "void*"
         },
         {
           "name": "renderer",
-          "type": "SDL_Renderer*"
+          "type": "void*"
         }
       ],
-      "argsoriginal": "(SDL_Window* window,SDL_Renderer* renderer)",
+      "argsoriginal": "(void* window,void* renderer)",
       "call_args": "(window,renderer)",
       "cimguiname": "ImGui_ImplSDL2_InitForSDLRenderer",
       "defaults": {},
@@ -87,20 +87,20 @@
       "location": "imgui_impl_sdl:31",
       "ov_cimguiname": "ImGui_ImplSDL2_InitForSDLRenderer",
       "ret": "bool",
-      "signature": "(SDL_Window*,SDL_Renderer*)",
+      "signature": "(void*,void*)",
       "stname": ""
     }
   ],
   "ImGui_ImplSDL2_InitForVulkan": [
     {
-      "args": "(SDL_Window* window)",
+      "args": "(void* window)",
       "argsT": [
         {
           "name": "window",
-          "type": "SDL_Window*"
+          "type": "void*"
         }
       ],
-      "argsoriginal": "(SDL_Window* window)",
+      "argsoriginal": "(void* window)",
       "call_args": "(window)",
       "cimguiname": "ImGui_ImplSDL2_InitForVulkan",
       "defaults": {},
@@ -108,7 +108,7 @@
       "location": "imgui_impl_sdl:28",
       "ov_cimguiname": "ImGui_ImplSDL2_InitForVulkan",
       "ret": "bool",
-      "signature": "(SDL_Window*)",
+      "signature": "(void*)",
       "stname": ""
     }
   ],
@@ -130,22 +130,22 @@
   ],
   "ImGui_ImplSDL2_ProcessEvent": [
     {
-      "args": "(const SDL_Event* event)",
+      "args": "(const void* evt)",
       "argsT": [
         {
-          "name": "event",
-          "type": "const SDL_Event*"
+          "name": "evt",
+          "type": "const void*"
         }
       ],
-      "argsoriginal": "(const SDL_Event* event)",
-      "call_args": "(event)",
+      "argsoriginal": "(const void* evt)",
+      "call_args": "(evt)",
       "cimguiname": "ImGui_ImplSDL2_ProcessEvent",
       "defaults": {},
       "funcname": "ImGui_ImplSDL2_ProcessEvent",
       "location": "imgui_impl_sdl:34",
       "ov_cimguiname": "ImGui_ImplSDL2_ProcessEvent",
       "ret": "bool",
-      "signature": "(const SDL_Event*)",
+      "signature": "(const void*)",
       "stname": ""
     }
   ],
