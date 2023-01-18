@@ -39,6 +39,13 @@ namespace CodeGenerator
                 functionsJson = JObject.Load(jr);
             }
 
+            JObject implFunctionsJson;
+            using (StreamReader fs = File.OpenText(Path.Combine(directory, "impl_definitions.json")))
+            using (JsonTextReader jr = new JsonTextReader(fs))
+            {
+                implFunctionsJson = JObject.Load(jr);
+            }
+
             JObject variantsJson = null;
             if (File.Exists(Path.Combine(directory, "variants.json")))
             {
@@ -98,7 +105,7 @@ namespace CodeGenerator
                 return new TypeDefinition(name, fields);
             }).Where(x => x != null).ToArray();
 
-            Functions = functionsJson.Children().Select(jt =>
+            Functions = functionsJson.Children().Concat(implFunctionsJson.Children()).Select(jt =>
             {
                 JProperty jp = (JProperty)jt;
                 string name = jp.Name;
