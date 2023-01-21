@@ -7,7 +7,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>portable</DebugType>
     <AssemblyName>ImGui.NET</AssemblyName>
-    <PackageId>ImGui.SDL.NET</PackageId>
+    <PackageId>ImGui.SDL.Dockspace.NET</PackageId>
     <PackagePrereleaseIdentifier></PackagePrereleaseIdentifier>
     <PackageVersion>$(AssemblyVersion)$(PackagePrereleaseIdentifier)</PackageVersion>
     <PackageTags>ImGui ImGui.NET Immediate Mode GUI</PackageTags>

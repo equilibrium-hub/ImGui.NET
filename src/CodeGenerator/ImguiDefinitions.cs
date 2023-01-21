@@ -120,15 +120,19 @@ namespace CodeGenerator
                         friendlyName = "Destroy";
                     }
                     //skip internal functions
-                    var typename = val["stname"]?.ToString();
-                    if (!string.IsNullOrEmpty(typename))
+
+                    if(!cimguiname.Contains("DockBuilder") || val["ret"].ToString().Contains("ImGuiDockNode*"))
                     {
-                        if (!Types.Any(x => x.Name == val["stname"]?.ToString())) {
-                            return null;
+                        var typename = val["stname"]?.ToString();
+                        if (!string.IsNullOrEmpty(typename))
+                        {
+                            if (!Types.Any(x => x.Name == val["stname"]?.ToString())) {
+                                return null;
+                            }
                         }
+                        if (friendlyName == null) { return null; }
+                        if (val["location"]?.ToString().Contains("internal") ?? false) return null;
                     }
-                    if (friendlyName == null) { return null; }
-                    if (val["location"]?.ToString().Contains("internal") ?? false) return null;
 
                     string exportedName = ov_cimguiname;
                     if (exportedName == null)
